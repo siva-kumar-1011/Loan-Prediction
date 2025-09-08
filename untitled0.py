@@ -1,4 +1,4 @@
-
+#libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,11 +7,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-
+#data intsert
 df = pd.read_csv('/test_Y3wMUE5_7gLdaTN.csv')
 print(df.head())
 print(df.info())
-
+#fillimgs colloumns  and summerizing
 df.ffill(inplace=True)
 df['Dependents'] = df['Dependents'].replace('3+', '3').astype(int)
 le = LabelEncoder()
